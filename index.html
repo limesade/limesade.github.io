@@ -36,6 +36,12 @@ a:hover {
 color: gray;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+ 
 .about {
 font-family: Courier New;
 font-size: .7em;
@@ -52,11 +58,6 @@ overflow-wrap: break-word;
 text-align: center;
 margin: 5px;
 padding: 5px;
-}
-
-#left {
-float: left;
-margin-left: 50px;
 }
  
 .footer {
@@ -81,9 +82,11 @@ padding: 5px;
 <img src="logo.png" margin-top=30px width=auto height=30% alt="logo">
     </div> 
 
-<br>
-<div id="left">
+<div class="grid-container">
 
+  <div class="grid-child">
+        Grid Column 1
+   
 <div class="links">
 <a href="corvus.html" target="blank" rel="noopener noreferrer">Corvus</a>
 <a href="portfolio.html" target="blank" rel="noopener noreferrer">Portfolio</a>
@@ -106,7 +109,8 @@ padding: 5px;
 <h1>30!</h1>
 </div>
 </div>
- 
+  <div class="grid-child">
+           Grid Column 2
 <div class="comm"
 <h1>COMMISSION STATUS: Open!</h1>
  <p> Slot 1: Open</p>
@@ -137,6 +141,7 @@ padding: 5px;
 <p>Please include reference images of your character(s). If there is anything specific you would like me to get inspired from (e.g. environment for background or stock images for poses) please include them as well. If you cannot provide reference for the character (meaning you only have a text description), an additional +5$ will be added to the price.</p>
  <p>-_-_-</p>
  </div>
+    </div>
  
 <div class="footer">
  <p></p>
