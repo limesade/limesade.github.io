@@ -73,6 +73,47 @@ padding: 10px;
  overflow-wrap: break-word;
  }
 
+.slider-frame {
+ overflow: hidden;
+ height: 800px;
+ width: 400px;
+ margin: 15px;
+ padding: 15px;
+ }
+ 
+@webkit-keyframes slide_animation {
+ 0% {left:0px;}
+ 10% {left:0px;}
+ 20% {left:1200px;}
+ 30% {left:1200px;}
+ 40% {left:2400px;}
+ 50% {left:2400px;}
+ 60% {left:1200px;}
+ 70% {left:1200px;}
+ 80% {left:0px;}
+ 90% {left:0px;}
+ 100% {left:0px;}
+ }
+ 
+ .slide-images{
+  width: auto;
+  height: auto;
+  margin: 0 0 0 -2400px;
+  position: relative;
+  -webkit-animation-name: slide_animation;
+  -webkit-animation-duration: 33s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-play-state: running;
+ }
+ 
+ .img-container {
+  height: 800px;
+  width: 1200px;
+  position: relative;
+  float: left;
+ }
+ 
 </style>
 
 <meta name="description" content="Our first page">
@@ -145,6 +186,20 @@ padding: 10px;
 <p>Please include reference images of your character(s). If there is anything specific you would like me to get inspired from (e.g. environment for background or stock images for poses) please include them as well. If you cannot provide reference for the character (meaning you only have a text description), an additional +5$ will be added to the price.</p>
  <p>-_-_-</p>
  </div>
+    </div>
+ 
+ <div class="grid-child">
+  <div class="slider-frame">
+   <div class="slide-images">
+    
+    <div class="img-container">
+     <img src="crow.png">
+    </div>
+        <div class="img-container">
+     <img src="me.png">
+    </div>
+        <div class="img-container">
+     <img src="Corvus_Cover.png">
     </div>
 
 
