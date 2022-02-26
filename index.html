@@ -73,48 +73,62 @@ padding: 10px;
  overflow-wrap: break-word;
  }
 
-.slider-frame {
+#slider {
  overflow: hidden;
- height: 800px;
- width: 1200px;
- margin: 360px;
- padding: 20px;
+ position: relative;
+ width: 500px;
+ height: 750px;
  }
  
-@webkit-keyframes slide_animation {
- 0% {left:0px;}
- 10% {left:0px;}
- 20% {left:1200px;}
- 30% {left:1200px;}
- 40% {left:2400px;}
- 50% {left:2400px;}
- 60% {left:1200px;}
- 70% {left:1200px;}
- 80% {left:0px;}
- 90% {left:0px;}
- 100% {left:0px;}
+#slider ul {
+ position: relative;
+  list-style: none;
+  height: 100%;
+  width: 10000%;
+  padding: 0;
+  margin: 0;
+  transition: all 750ms ease;
+  left: 0;
  }
  
- .slide-images{
-  width: 3600px;
-  height: 800px;
-  margin: 0 0 0 -2400px;
+ #slider ul li {
   position: relative;
-  -webkit-animation-name: slide_animation;
-  -webkit-animation-duration: 33s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-  -webkit-animation-play-state: running;
- }
+  height: 100%;
  
- .img-container {
-  height: 800px;
-  width: 1200px;
-  position: relative;
   float: left;
- }
+}
  
+#slider ul li img{
+  width: 500px;
+  height: 265px;
+}
 </style>
+
+<script>
+ var responsiveSlider = function() {
+
+var slider = document.getElementById("slider");
+var sliderWidth = slider.offsetWidth;
+var slideList = document.getElementById("slideWrap");
+var count = 1;
+var items = slideList.querySelectorAll("li").length;
+var prev = document.getElementById("prev");
+var next = document.getElementById("next");
+
+window.addEventListener('resize', function() {
+  sliderWidth = slider.offsetWidth;
+});
+  
+  setInterval(function() {
+  nextSlide()
+}, 8000);
+
+};
+
+ window.onload = function() {
+responsiveSlider();  
+}
+ </script>
 
 <meta name="description" content="Our first page">
 <meta name="keywords" content="html tutorial template">
@@ -189,22 +203,13 @@ padding: 10px;
     </div>
  
  <div class="grid-child">
-  <div class="slider-frame">
-   <div class="slide-images">
     
-    <div class="img-container">
-     <img src="crow.png">
-    </div>
-        <div class="img-container">
-     <img src="me.png">
-    </div>
-        <div class="img-container">
-     <img src="Corvus_Cover.png">
-    </div>
+    <ul id="slideWrap">
+     <li><img src="crow.png"></li>
+     <li><img src="me.png"></li>
+     <li><img src="Corvus_Cover.png"></li>
+    </ul>
    </div>
-  </div>
- </div>
-
 
 </body>
 </html>
