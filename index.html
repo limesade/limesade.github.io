@@ -2,6 +2,32 @@
 <html>
 <head>
 <title>Limesade's Website</title>
+ <script>
+ var responsiveSlider = function() {
+
+var slider = document.getElementById("slider");
+var sliderWidth = slider.offsetWidth;
+var slideList = document.getElementById("slideWrap");
+var count = 1;
+var items = slideList.querySelectorAll("li").length;
+var prev = document.getElementById("prev");
+var next = document.getElementById("next");
+
+window.addEventListener('resize', function() {
+  sliderWidth = slider.offsetWidth;
+});
+  
+  setInterval(function() {
+  nextSlide()
+}, 8000);
+
+};
+
+ window.onload = function() {
+responsiveSlider();  
+}
+ </script>
+ 
 <style>
 
 body {
@@ -104,31 +130,7 @@ padding: 10px;
 }
 </style>
 
-<script>
- var responsiveSlider = function() {
 
-var slider = document.getElementById("slider");
-var sliderWidth = slider.offsetWidth;
-var slideList = document.getElementById("slideWrap");
-var count = 1;
-var items = slideList.querySelectorAll("li").length;
-var prev = document.getElementById("prev");
-var next = document.getElementById("next");
-
-window.addEventListener('resize', function() {
-  sliderWidth = slider.offsetWidth;
-});
-  
-  setInterval(function() {
-  nextSlide()
-}, 8000);
-
-};
-
- window.onload = function() {
-responsiveSlider();  
-}
- </script>
 
 <meta name="description" content="Our first page">
 <meta name="keywords" content="html tutorial template">
@@ -203,13 +205,14 @@ responsiveSlider();
     </div>
  
  <div class="grid-child">
-    
+    <div id="slider">
     <ul id="slideWrap">
      <li><img src="crow.png"></li>
      <li><img src="me.png"></li>
      <li><img src="Corvus_Cover.png"></li>
     </ul>
    </div>
+ </div>
 
 </body>
 </html>
