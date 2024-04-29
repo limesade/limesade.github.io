@@ -1,89 +1,232 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
 
+@font-face {
+  font-family: Instrument;
+  src: url(InstrumentSerif-Italic.ttf);
+}
 
 body {
-    background-color: #f9eccc;
-     }
-     
-    .header {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+        color: white;
+        animation: animate 3s ease-out forwards 1; 
+        animation-delay: 0.1s;
+}
+
+h2 {
+    font-size: 45px;
+    letter-spacing: -5px;
+}
+
+h3 {
+  font-size: 40px;
+  line-height: 1;
+  margin: 20px;
+}
+
+h4 {
+  font-size: 100px;
+  line-height: 0;
+  padding: 10%;
+  margin: 20px;
+}
+
+h5 {
+  font-size: 20px;
+  margin: 20px;
+  line-height: 15px;
+}
+
+p {
+  font-size: 12px;
+}
+
+container {
+    display: block;
+    aspect-ratio: 16 / 9;
+    background-color: blue;
+    padding: 5px;
+    font-size: 100px;
     text-align: left;
-    background-image: url(header.png);
-    height: 150px;
-    }
+    line-height: 0.7;
+    word-wrap: break-word;
+}
+
+.ticker-wrap {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    display:block;
+    background-color: #ffffff; 
+    padding-bottom: 30px;
+  }
+  .ticker {
+    display: inline-block;
+    animation: marquee 20s linear infinite;
+  }
+  .header-banner-1 {
+    position: relative;
+    left: 0%;
+    animation: swap 20s linear infinite;
+  }
+  
+  .item {
+    display: inline-block;
+    padding: 0 1rem;
+    font-size: 2rem;
+    color: black;   
+    font-weight: 800;
+    font-family: sans-serif;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    margin: 0;
+  }
+  
+.flex-item {
+    flex: 33.33%;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+  }
+
+.flex-container2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     
-    .links {
-    padding: 10px;
-    font-family: Courier New;
-    margin: 5px;
-     }
-    
-    .socials {
+  }
+
+  .flex-item2 {
+    justify-content: space-evenly;
     text-align: left;
-    font-family: Courier New;
-    margin: 5px;
-    padding: 5px;
-    font-size: .8em;
-    }
-    a {
-    color: #000000;
-    }
-    
-    a:hover {
-    color: gray;
-    }
-    
-    .grid-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 5px;
-    }
-     
-    .about {
-    font-family: Courier New;
-    font-size: .7em;
-    inline-size: 200px;
-    overflow-wrap: break-word;
-    margin: 5px;
-    padding: 5px;
-    }
-    
-     .gifs {
-    font-family: Courier New;
-    font-size: .7em;
-    inline-size: 200px;
-    overflow-wrap: break-word;
-    margin: 5px;
-    padding: 5px;
-     }
-     
-    .pagecount {
-    font-family: Courier New;
-    inline-size: 200px;
-    overflow-wrap: break-word;
-    text-align: center;
-    margin: 5px;
-    padding: 5px;
-    }
-     
-    .slots {
-    font-family: Courier New;
-    margin: 5px;
-    padding: 5px;
-    text-align: center;
-     }
-     
-    .comm {
-     font-family: Courier New;
-     margin: 5px;
     padding: 10px;
-     overflow-wrap: break-word;
-     }
-     
-    .sidebar {
-     margin: 15px;
-     padding: 15px;
-     width: auto;
-     height: auto; 
-     text-align: right;
-     font-family: Courier New;
-     overflow-wrap: break-word;
-     }
+    max-width: 300px;
+  }
+
+  .container3 {
+    margin: 0;
+    display: block;
+  }
+
+  .item3 {
+    display: inline-block;
+    padding: 20px;
+    width: 50%;
+    margin: 20px;
+  }
+
+  .item3 img{
+    float: left;
+    text-align: left;
+    padding: 10px;
+  }
+
+img {
+    max-width: 300px;
+    height: auto;
+}
+
+video {
+    max-height: 400px;
+}
+
+.containertwo {
+  display: block;
+}
+
+/* Style the tab */
+.tab {
+  width: 100%;
+  font-family: Instrument;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 20px;
+  transition: 0.3s;
+  border-radius: 50px;
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: blue;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: blue;
+}
+
+/* Style the tab content */
+.tabcontent {
+  margin: 20px;
+}
+
+
+@media (max-width: 800px) {
+  container {
+   aspect-ratio: 4 / 3;
+  }
+
+  .flex-container {
+   flex-direction: column;
+   align-items: center;
+ }
+
+ .flex-container2 {
+  flex-direction: column;
+  align-items: center;
+}
+  }
+
+
+
+ /* For animation */ 
+ @keyframes animate { 
+    0% { 
+        letter-spacing: -100px; 
+    } 
+
+    100% { 
+        letter-spacing: -25px; 
+    } 
+} 
+
+@keyframes marquee {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes swap {
+    0%, 50% {
+      left: 0%;
+    }
+    50.01%,
+    100% {
+      left: 100%;
+    }
+  }
